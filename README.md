@@ -176,7 +176,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **John Mataa**
 - Email: [johnnymataa019@gmail.com](mailto:johnnymataa019@gmail.com)
-- Project Link: [Custom App Repository](https://github.com/johnmataa/custom_app)
+- Project Link: [Custom App Repository](https://github.com/mataa019/Custom_App)
 
 ## 🙏 Acknowledgments
 
