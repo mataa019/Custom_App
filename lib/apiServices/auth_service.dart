@@ -36,7 +36,7 @@ class AuthService {
   Future<bool> login(String email, String password) async {
     // Simulate API call
     await Future.delayed(const Duration(seconds: 1));
-    
+
     // Simple validation (in real app, validate with server)
     if (email.isNotEmpty && password.length >= 6) {
       final prefs = await SharedPreferences.getInstance();
@@ -51,7 +51,7 @@ class AuthService {
   Future<bool> register(String name, String email, String password) async {
     // Simulate API call
     await Future.delayed(const Duration(seconds: 1));
-    
+
     // Simple validation (in real app, validate with server)
     if (name.isNotEmpty && email.isNotEmpty && password.length >= 6) {
       final prefs = await SharedPreferences.getInstance();

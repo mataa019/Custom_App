@@ -91,14 +91,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: const Icon(
-                    Icons.lock,
-                    size: 50,
-                    color: Colors.white,
-                  ),
+                  child: const Icon(Icons.lock, size: 50, color: Colors.white),
                 ),
                 const SizedBox(height: 32),
-                
+
                 // Title
                 const Text(
                   'Welcome Back!',
@@ -111,10 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 8),
                 const Text(
                   'Sign in to your account',
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Colors.grey,
-                  ),
+                  style: TextStyle(fontSize: 16, color: Colors.grey),
                 ),
                 const SizedBox(height: 40),
 
@@ -162,7 +155,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: TextButton(
                     onPressed: () {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Forgot password coming soon!')),
+                        const SnackBar(
+                          content: Text('Forgot password coming soon!'),
+                        ),
                       );
                     },
                     child: const Text('Forgot Password?'),

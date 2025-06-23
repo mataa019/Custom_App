@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../Component/custom_navigation_bar.dart';
 
-enum NavigationBarStyle {
-  custom,
-  modern,
-  floating,
-}
+enum NavigationBarStyle { custom, modern, floating }
 
 class NavigationBarDemo extends StatefulWidget {
   const NavigationBarDemo({super.key});
@@ -44,8 +40,16 @@ class _NavigationBarDemoState extends State<NavigationBarDemo> {
   final List<Widget> _screens = [
     const DemoScreen(title: 'Home', icon: Icons.home, color: Colors.blue),
     const DemoScreen(title: 'Search', icon: Icons.search, color: Colors.green),
-    const DemoScreen(title: 'Favorites', icon: Icons.favorite, color: Colors.red),
-    const DemoScreen(title: 'Profile', icon: Icons.person, color: Colors.purple),
+    const DemoScreen(
+      title: 'Favorites',
+      icon: Icons.favorite,
+      color: Colors.red,
+    ),
+    const DemoScreen(
+      title: 'Profile',
+      icon: Icons.person,
+      color: Colors.purple,
+    ),
   ];
 
   @override
@@ -63,20 +67,21 @@ class _NavigationBarDemoState extends State<NavigationBarDemo> {
                 _selectedStyle = style;
               });
             },
-            itemBuilder: (context) => [
-              const PopupMenuItem(
-                value: NavigationBarStyle.custom,
-                child: Text('Custom Animated'),
-              ),
-              const PopupMenuItem(
-                value: NavigationBarStyle.modern,
-                child: Text('Modern Material 3'),
-              ),
-              const PopupMenuItem(
-                value: NavigationBarStyle.floating,
-                child: Text('Floating Style'),
-              ),
-            ],
+            itemBuilder:
+                (context) => [
+                  const PopupMenuItem(
+                    value: NavigationBarStyle.custom,
+                    child: Text('Custom Animated'),
+                  ),
+                  const PopupMenuItem(
+                    value: NavigationBarStyle.modern,
+                    child: Text('Modern Material 3'),
+                  ),
+                  const PopupMenuItem(
+                    value: NavigationBarStyle.floating,
+                    child: Text('Floating Style'),
+                  ),
+                ],
           ),
         ],
       ),
@@ -141,10 +146,7 @@ class DemoScreen extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [
-            color.withOpacity(0.1),
-            Colors.white,
-          ],
+          colors: [color.withOpacity(0.1), Colors.white],
         ),
       ),
       child: Center(
@@ -157,11 +159,7 @@ class DemoScreen extends StatelessWidget {
                 color: color.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(20),
               ),
-              child: Icon(
-                icon,
-                size: 80,
-                color: color,
-              ),
+              child: Icon(icon, size: 80, color: color),
             ),
             const SizedBox(height: 24),
             Text(
@@ -175,10 +173,7 @@ class DemoScreen extends StatelessWidget {
             const SizedBox(height: 16),
             Text(
               'This is the $title screen',
-              style: const TextStyle(
-                fontSize: 16,
-                color: Colors.grey,
-              ),
+              style: const TextStyle(fontSize: 16, color: Colors.grey),
             ),
           ],
         ),

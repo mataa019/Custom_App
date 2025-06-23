@@ -14,7 +14,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
-  
+
   final List<Widget> _screens = [
     const HomeScreen(),
     const SettingsScreen(),
@@ -45,7 +45,7 @@ class _MainScreenState extends State<MainScreen> {
       drawer: const CustomDrawer(),
       body: _screens[_currentIndex],
       // You can choose between different navigation bar styles:
-      
+
       // Option 1: Custom animated navigation bar
       bottomNavigationBar: CustomBottomNavigationBar(
         currentIndex: _currentIndex,
@@ -56,7 +56,7 @@ class _MainScreenState extends State<MainScreen> {
         },
         items: _navigationItems,
       ),
-      
+
       // Option 2: Modern Material 3 style (uncomment to use)
       // bottomNavigationBar: ModernBottomNavigationBar(
       //   currentIndex: _currentIndex,
@@ -67,7 +67,7 @@ class _MainScreenState extends State<MainScreen> {
       //   },
       //   items: _navigationItems,
       // ),
-      
+
       // Option 3: Floating style (uncomment to use)
       // bottomNavigationBar: FloatingBottomNavigationBar(
       //   currentIndex: _currentIndex,

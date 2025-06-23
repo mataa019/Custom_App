@@ -97,7 +97,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               child: Column(
                 children: [
                   const SizedBox(height: 20),
-                  
+
                   // Logo
                   Container(
                     width: 100,
@@ -113,7 +113,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                   ),
                   const SizedBox(height: 32),
-                  
+
                   // Title
                   const Text(
                     'Create Account',
@@ -126,10 +126,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const SizedBox(height: 8),
                   const Text(
                     'Sign up to get started',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.grey,
-                    ),
+                    style: TextStyle(fontSize: 16, color: Colors.grey),
                   ),
                   const SizedBox(height: 40),
 

@@ -16,11 +16,7 @@ class CustomDrawer extends StatelessWidget {
             accountEmail: Text('john@example.com'),
             currentAccountPicture: CircleAvatar(
               backgroundColor: Colors.white,
-              child: Icon(
-                Icons.person,
-                size: 40,
-                color: Colors.blue,
-              ),
+              child: Icon(Icons.person, size: 40, color: Colors.blue),
             ),
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -30,7 +26,7 @@ class CustomDrawer extends StatelessWidget {
               ),
             ),
           ),
-          
+
           // Menu Items
           Expanded(
             child: ListView(
@@ -101,10 +97,7 @@ class CustomDrawer extends StatelessWidget {
     Color? textColor,
   }) {
     return ListTile(
-      leading: Icon(
-        icon,
-        color: textColor ?? Colors.grey[700],
-      ),
+      leading: Icon(icon, color: textColor ?? Colors.grey[700]),
       title: Text(
         title,
         style: TextStyle(
@@ -133,7 +126,9 @@ class CustomDrawer extends StatelessWidget {
       applicationVersion: '1.0.0',
       applicationIcon: const Icon(Icons.apps, size: 50),
       children: const [
-        Text('A modern Flutter application with authentication and navigation.'),
+        Text(
+          'A modern Flutter application with authentication and navigation.',
+        ),
       ],
     );
   }
@@ -141,20 +136,21 @@ class CustomDrawer extends StatelessWidget {
   Future<void> _logout(BuildContext context) async {
     final shouldLogout = await showDialog<bool>(
       context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Logout'),
-        content: const Text('Are you sure you want to logout?'),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context, false),
-            child: const Text('Cancel'),
+      builder:
+          (context) => AlertDialog(
+            title: const Text('Logout'),
+            content: const Text('Are you sure you want to logout?'),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context, false),
+                child: const Text('Cancel'),
+              ),
+              TextButton(
+                onPressed: () => Navigator.pop(context, true),
+                child: const Text('Logout'),
+              ),
+            ],
           ),
-          TextButton(
-            onPressed: () => Navigator.pop(context, true),
-            child: const Text('Logout'),
-          ),
-        ],
-      ),
     );
 
     if (shouldLogout == true) {

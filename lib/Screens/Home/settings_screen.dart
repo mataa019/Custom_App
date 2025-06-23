@@ -41,9 +41,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
             subtitle: 'Manage your privacy settings',
             onTap: () => _showComingSoon('Privacy & Security'),
           ),
-          
+
           const SizedBox(height: 24),
-          
+
           // Preferences Section
           _buildSectionHeader('Preferences'),
           _buildSwitchTile(
@@ -81,9 +81,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
               _showComingSoon('Biometric Login');
             },
           ),
-          
+
           const SizedBox(height: 24),
-          
+
           // Support Section
           _buildSectionHeader('Support'),
           _buildSettingsTile(
@@ -104,9 +104,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
             subtitle: 'Rate us on the app store',
             onTap: () => _showComingSoon('Rate App'),
           ),
-          
+
           const SizedBox(height: 24),
-          
+
           // About Section
           _buildSectionHeader('About'),
           _buildSettingsTile(
@@ -165,10 +165,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
           child: Icon(icon, color: Colors.blue),
         ),
-        title: Text(
-          title,
-          style: const TextStyle(fontWeight: FontWeight.w600),
-        ),
+        title: Text(title, style: const TextStyle(fontWeight: FontWeight.w600)),
         subtitle: Text(subtitle),
         trailing: const Icon(Icons.arrow_forward_ios, size: 16),
         onTap: onTap,
@@ -196,10 +193,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
           child: Icon(icon, color: Colors.blue),
         ),
-        title: Text(
-          title,
-          style: const TextStyle(fontWeight: FontWeight.w600),
-        ),
+        title: Text(title, style: const TextStyle(fontWeight: FontWeight.w600)),
         subtitle: Text(subtitle),
         value: value,
         onChanged: onChanged,

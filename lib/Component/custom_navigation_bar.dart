@@ -30,51 +30,58 @@ class CustomBottomNavigationBar extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: items.asMap().entries.map((entry) {
-              final index = entry.key;
-              final item = entry.value;
-              final isSelected = index == currentIndex;
+            children:
+                items.asMap().entries.map((entry) {
+                  final index = entry.key;
+                  final item = entry.value;
+                  final isSelected = index == currentIndex;
 
-              return GestureDetector(
-                onTap: () => onTap(index),
-                child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 200),
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  decoration: BoxDecoration(
-                    color: isSelected ? Colors.blue.withOpacity(0.1) : Colors.transparent,
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      AnimatedContainer(
-                        duration: const Duration(milliseconds: 200),
-                        child: Icon(
-                          isSelected ? item.activeIcon : item.icon,
-                          color: isSelected ? Colors.blue : Colors.grey,
-                          size: 24,
-                        ),
+                  return GestureDetector(
+                    onTap: () => onTap(index),
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 200),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 8,
                       ),
-                      if (isSelected) ...[
-                        const SizedBox(width: 8),
-                        AnimatedOpacity(
-                          duration: const Duration(milliseconds: 200),
-                          opacity: isSelected ? 1.0 : 0.0,
-                          child: Text(
-                            item.label,
-                            style: const TextStyle(
-                              color: Colors.blue,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 14,
+                      decoration: BoxDecoration(
+                        color:
+                            isSelected
+                                ? Colors.blue.withOpacity(0.1)
+                                : Colors.transparent,
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          AnimatedContainer(
+                            duration: const Duration(milliseconds: 200),
+                            child: Icon(
+                              isSelected ? item.activeIcon : item.icon,
+                              color: isSelected ? Colors.blue : Colors.grey,
+                              size: 24,
                             ),
                           ),
-                        ),
-                      ],
-                    ],
-                  ),
-                ),
-              );
-            }).toList(),
+                          if (isSelected) ...[
+                            const SizedBox(width: 8),
+                            AnimatedOpacity(
+                              duration: const Duration(milliseconds: 200),
+                              opacity: isSelected ? 1.0 : 0.0,
+                              child: Text(
+                                item.label,
+                                style: const TextStyle(
+                                  color: Colors.blue,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ],
+                      ),
+                    ),
+                  );
+                }).toList(),
           ),
         ),
       ),
@@ -116,13 +123,14 @@ class ModernBottomNavigationBar extends StatelessWidget {
       elevation: 8,
       height: 65,
       labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
-      destinations: items.map((item) {
-        return NavigationDestination(
-          icon: Icon(item.icon),
-          selectedIcon: Icon(item.activeIcon),
-          label: item.label,
-        );
-      }).toList(),
+      destinations:
+          items.map((item) {
+            return NavigationDestination(
+              icon: Icon(item.icon),
+              selectedIcon: Icon(item.activeIcon),
+              label: item.label,
+            );
+          }).toList(),
     );
   }
 }
@@ -162,29 +170,33 @@ class FloatingBottomNavigationBar extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: items.asMap().entries.map((entry) {
-                final index = entry.key;
-                final item = entry.value;
-                final isSelected = index == currentIndex;
+              children:
+                  items.asMap().entries.map((entry) {
+                    final index = entry.key;
+                    final item = entry.value;
+                    final isSelected = index == currentIndex;
 
-                return GestureDetector(
-                  onTap: () => onTap(index),
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeInOut,
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                    decoration: BoxDecoration(
-                      color: isSelected ? Colors.blue : Colors.transparent,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Icon(
-                      isSelected ? item.activeIcon : item.icon,
-                      color: isSelected ? Colors.white : Colors.grey,
-                      size: 24,
-                    ),
-                  ),
-                );
-              }).toList(),
+                    return GestureDetector(
+                      onTap: () => onTap(index),
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 300),
+                        curve: Curves.easeInOut,
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 8,
+                        ),
+                        decoration: BoxDecoration(
+                          color: isSelected ? Colors.blue : Colors.transparent,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Icon(
+                          isSelected ? item.activeIcon : item.icon,
+                          color: isSelected ? Colors.white : Colors.grey,
+                          size: 24,
+                        ),
+                      ),
+                    );
+                  }).toList(),
             ),
           ),
         ),

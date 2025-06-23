@@ -55,7 +55,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 16),
-                  
+
                   // User Info
                   const Text(
                     'John Mataa',
@@ -68,14 +68,14 @@ class ProfileScreen extends StatelessWidget {
                   const SizedBox(height: 8),
                   const Text(
                     'johnnymataa019@gmail.com',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.white70,
-                    ),
+                    style: TextStyle(fontSize: 16, color: Colors.white70),
                   ),
                   const SizedBox(height: 8),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 6,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.2),
                       borderRadius: BorderRadius.circular(20),
@@ -93,13 +93,11 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
-            
+
             // Stats Row
             Row(
               children: [
-                Expanded(
-                  child: _buildStatCard('Posts', '24', Icons.article),
-                ),
+                Expanded(child: _buildStatCard('Posts', '24', Icons.article)),
                 const SizedBox(width: 12),
                 Expanded(
                   child: _buildStatCard('Followers', '1.2K', Icons.people),
@@ -111,7 +109,7 @@ class ProfileScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 24),
-            
+
             // Menu Items
             _buildMenuSection('Account', [
               _buildMenuItem(
@@ -130,9 +128,9 @@ class ProfileScreen extends StatelessWidget {
                 onTap: () => _showComingSoon(context, 'Order History'),
               ),
             ]),
-            
+
             const SizedBox(height: 16),
-            
+
             _buildMenuSection('Preferences', [
               _buildMenuItem(
                 icon: Icons.language,
@@ -147,9 +145,9 @@ class ProfileScreen extends StatelessWidget {
                 onTap: () => _showComingSoon(context, 'Location'),
               ),
             ]),
-            
+
             const SizedBox(height: 16),
-            
+
             _buildMenuSection('Support', [
               _buildMenuItem(
                 icon: Icons.help_outline,
@@ -195,13 +193,7 @@ class ProfileScreen extends StatelessWidget {
               color: Colors.black87,
             ),
           ),
-          Text(
-            label,
-            style: const TextStyle(
-              fontSize: 12,
-              color: Colors.grey,
-            ),
-          ),
+          Text(label, style: const TextStyle(fontSize: 12, color: Colors.grey)),
         ],
       ),
     );
@@ -256,18 +248,12 @@ class ProfileScreen extends StatelessWidget {
         ),
         child: Icon(icon, color: Colors.blue, size: 20),
       ),
-      title: Text(
-        title,
-        style: const TextStyle(fontWeight: FontWeight.w500),
-      ),
+      title: Text(title, style: const TextStyle(fontWeight: FontWeight.w500)),
       trailing: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
           if (trailing != null) ...[
-            Text(
-              trailing,
-              style: const TextStyle(color: Colors.grey),
-            ),
+            Text(trailing, style: const TextStyle(color: Colors.grey)),
             const SizedBox(width: 8),
           ],
           const Icon(Icons.arrow_forward_ios, size: 16, color: Colors.grey),

@@ -47,16 +47,13 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: 8),
                   Text(
                     'Have a great day ahead',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.white70,
-                    ),
+                    style: TextStyle(fontSize: 16, color: Colors.white70),
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 24),
-            
+
             // Features Grid
             const Text(
               'Quick Actions',
@@ -67,7 +64,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            
+
             Expanded(
               child: GridView.count(
                 crossAxisCount: 2,
@@ -103,7 +100,8 @@ class HomeScreen extends StatelessWidget {
                     title: 'Calendar',
                     color: Colors.teal,
                     onTap: () => _showComingSoon(context, 'Calendar'),
-                  ),                  _buildFeatureCard(
+                  ),
+                  _buildFeatureCard(
                     icon: Icons.folder,
                     title: 'Files',
                     color: Colors.indigo,
@@ -113,10 +111,13 @@ class HomeScreen extends StatelessWidget {
                     icon: Icons.navigation,
                     title: 'Nav Demo',
                     color: Colors.orange,
-                    onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const NavigationBarDemo()),
-                    ),
+                    onTap:
+                        () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const NavigationBarDemo(),
+                          ),
+                        ),
                   ),
                 ],
               ),
@@ -157,11 +158,7 @@ class HomeScreen extends StatelessWidget {
                 color: color.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Icon(
-                icon,
-                size: 32,
-                color: color,
-              ),
+              child: Icon(icon, size: 32, color: color),
             ),
             const SizedBox(height: 12),
             Text(
