@@ -175,8 +175,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 **John Mataa**
-- Email: [johnnymataa019@gmail.com](mailto:johnnymataa019@gmail.com)
-- Project Link: [Custom App Repository](https://github.com/mataa019/Custom_App)
+- 🌐 Portfolio: [https://mataadev.vercel.app/](https://mataadev.vercel.app/)
+- 📧 Email: [johnnymataa019@gmail.com](mailto:johnnymataa019@gmail.com)
+- 🚀 Project Link: [Custom App Repository](https://github.com/mataa019/Custom_App)
 
 ## 🙏 Acknowledgments
 
